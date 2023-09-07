@@ -1,0 +1,61 @@
+@import "../../assets/styles/colors";
+
+.dialog-wrap {
+  background-color: $light-background;
+
+
+  h1 {
+    text-align: center;
+    color: $main-background;
+    font-weight: bold;
+  }
+
+  &_input, &_label {
+    color: black !important;
+  }
+
+  &_input {
+    width: 100%;
+    height: 40px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: 1px solid $main-background;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  &_buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    button {
+      min-width: 70px;
+      background-color: $main-background;
+
+      &[disabled="true"] {
+        background-color: #ba8ac2;
+      }
+    }
+  }
+
+  &_errors {
+    height: 20px;
+    margin-bottom: 20px;
+  }
+
+  ::ng-deep {
+    .mdc-text-field--filled {
+      background-color: #e5d2e8;
+    }
+  }
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+}
